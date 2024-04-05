@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小小熊的照片集</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* 调整标题样式 */
+        .title {
+            background: linear-gradient(to right, #c187eb, #6627b2);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 42px; /* 提高标题字号 */
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 调整介绍文本样式 */
+        .intro {
+            text-align: center;
+            font-size: 20px; /* 提高介绍文本字号 */
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 水平居中对齐 */
+            align-items: flex-start; /* 顶部对齐 */
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            flex: 0 0 calc(50% - 60px); /* 每个容器占据20%的宽度，并考虑间距 */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* 加深阴影 */
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .gallery .video-container:hover {
+            transform: scale(1.05); /* 调整放大效果 */
+        }
+
+        .gallery video {
+            width: 100%; /* 让视频填充其容器 */
+            height: auto;
+            cursor: pointer; /* 鼠标样式指示可点击 */
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        /* 调整页脚样式 */
+        .footer {
+            background-color: #ad87eb;
+            text-align: center;
+            padding: 30px 0; /* 增加页脚内边距 */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .footer p {
+            color: #fff;
+            margin: 10px 0; /* 增加段落上下边距 */
+            font-size: 18px; /* 调整文字字号 */
+        }
+
+        /* 调整页脚链接样式 */
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px; /* 增加链接间距 */
+            font-size: 18px; /* 调整链接字号 */
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #f0f0f0;
+        }
+
+        /* 调整图标样式 */
+        .footer-links a i {
+            margin-right: 8px; /* 调整图标间距 */
+            font-size: 20px; /* 提高图标字号 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">欢迎来到小小熊的Vedio集</div>
+    <div class="intro"></div>
+    <div class="gallery">
+        
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0005.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">等待手术中</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0007.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">在首尔下着四十多年不见的大雪的这天</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0008.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">我出生了</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0010.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">在新生儿室</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0012.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小小熊的第一次写真, 连眼睛都还没睁开</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0036.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">第一次换尿不湿</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0039.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">吃饱饱拍嗝</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0042.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小小熊打针</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0093.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小小袋鼠熊</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0094.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小小熊又打针了</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0101.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小熊自己陪自己玩</div>
+        </div>
+
+        <div class="video-container" onclick="loadVideo(this)">
+            <video controls poster="picture/qing/laugh.jpg">
+                <source data-src="vedio/qing/0106.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <div class="video-overlay">小熊呼呼呼</div>
+        </div>
+
+        
+
+    </div>
+    <div class="footer">
+        <p>版权所有 &copy; 小小熊</p>
+        <p>联系邮箱: yiu867118@gmail.com</p>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-facebook-f"></i>有隐私政策</a>
+            <a href="#"><i class="fab fa-twitter"></i>没有服务条款</a>
+            <a href="#"><i class="fas fa-question-circle"></i>没有问题</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    
+    function loadVideo(element) {
+        var video = element.querySelector('video');
+        var source = video.querySelector('source');
+        source.src = source.getAttribute('data-src');
+        video.load();
+        element.querySelector('.video-overlay').style.display = 'none';
+    }
+   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两只小熊的照片集</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f6fc; /* 浅蓝色背景 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .title {
+            background: linear-gradient(to right,  #73c2f6, hsl(202, 68%, 38%)); /* 渐变浅蓝色背景 */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            background-color: #fff; /* 白色背景 */
+        }
+
+        
+
+        .year-container {
+            margin: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .year-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .year-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #3faeef;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .year-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            max-width: 440px; /* 设置最大宽度，以确保每行只有两张照片 */
+            margin: 0 auto; /* 居中显示 */
+        }
+
+        .year-images img {
+            max-width: calc(50% - 20px); /* 计算每张图片的最大宽度，减去外边距 */
+            width: 100%; /* 图片宽度占满容器的一半 */
+            height: auto;
+            margin: 10px; /* 外边距调整为10px */
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+
+        .year-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #2c97d5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">欢迎来到两只小熊的照片集</div>
+    <div class="intro">
+        <p></p>
+    </div>
+    <div class="gallery">
+        <div class="year-container">
+            <span class="year-label">2020年</span>
+            <div class="year-images">
+                <img src="picture/junguang/2020_03_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2020_03_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2020_03_3.jpg" alt="两只小熊">
+                <img src="picture/junguang/2020_03_4.jpg" alt="两只小熊">
+                <img src="picture/junguang/2020_10_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2020_10_2.jpg" alt="两只小熊">
+            </div>
+        </div>
+        
+        <div class="year-container">
+            <span class="year-label">2021年</span>
+            <div class="year-images">
+                <img src="picture/junguang/2021_12_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2021_12_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2021_12_3.jpg" alt="两只小熊">
+                <img src="picture/junguang/2021_12_4.jpg" alt="两只小熊">
+            </div>
+        </div>
+        
+        <div class="year-container">
+            <span class="year-label">2022年</span>
+            <div class="year-images">
+                <img src="picture/junguang/2022_08_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2022_08_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2022_08_3.jpg" alt="两只小熊">
+                <img src="picture/junguang/2022_09_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2022_10_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2022_10_2.jpg" alt="两只小熊">
+            </div>
+        </div>
+         
+
+        <div class="year-container">
+            <span class="year-label">2023年</span>
+            <div class="year-images">
+                <img src="picture/junguang/2023_02_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_02_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_07_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_07_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_07_3.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_07_4.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_1.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_2.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_3.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_4.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_5.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_6.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_7.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_8.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_9.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_10.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_11.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_12.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_13.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_14.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_15.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_16.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_17.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_18.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_19.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_20.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_21.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_22.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_23.jpg" alt="两只小熊">
+                <img src="picture/junguang/2023_08_24.jpg" alt="两只小熊">
+            </div>
+        </div>
+    </div>    
+        
+        
+    <div class="footer">
+        <p>版权所有 © 君小熊</p>
+        <p>联系邮箱: yiu867118@gmail.com</p>
+        <div class="footer-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>有隐私政策</a>
+            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i>没有服务条款</a>
+            <a href="https://www.example.com/faq"><i class="fas fa-question-circle"></i>没有问题</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
